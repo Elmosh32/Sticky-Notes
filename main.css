@@ -1,0 +1,83 @@
+body {
+  margin: 0;
+  background: #009578;
+}
+
+#app {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 200px);
+  padding: 24px;
+  gap: 100px;
+}
+
+.note {
+  position: relative;
+  height: 250px;
+  width: 250px;
+  box-sizing: border-box;
+  padding: 16px;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 0 7px rgba(0, 0, 0, 0.15);
+  resize: none;
+  font-family: sans-serif;
+  font-size: 16px;
+}
+
+.add-note {
+  position: relative;
+  height: 250px;
+  width: 250px;
+  border: none;
+  outline: none;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  font-size: 120px;
+  color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.add-note:hover {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.delete-note {
+  position: relative;
+  background-color: white;
+  height: 40px;
+  width: 124px;
+  border: 2px solid black;
+  border-radius: 12px;
+  padding: 8px 16px;
+  text-align: center;
+  font-size: 14px;
+  top: -40px;
+  left: 125px;
+}
+
+.delete-note:hover {
+  background: linear-gradient(to bottom, #f44336 0%, #28343b 100%);
+  color: white;
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+.clear-note {
+  position: relative;
+  background-color: white;
+  height: 40px;
+  width: 124px;
+  border: 2px solid black;
+  border-radius: 12px;
+  padding: 8px 16px;
+  font-size: 14px;
+  align-items: center;
+  text-align: center;
+}
+
+.clear-note:hover {
+  background: linear-gradient(to bottom, #55585e 0%, #094061 100%);
+  color: white;
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}

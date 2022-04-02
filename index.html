@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sticky Notes</title>
+  <link rel="stylesheet" href="./main.css">
+  <script src="./main.js" defer></script>
+</head>
+
+<body>
+  <div id="app">
+    <form class="board" id="board">
+      <textarea class="note" id="message" placeholder="Sticky Notes Guide:&#10;
+to clear the board click &quot;Reset Note&quot; button and confirm.&#10;
+to delete the board click &quot;Delete Note&quot button and confirm.&#10;
+to add board click on the PLUS."></textarea>
+      <button class="clear-note" type="reset" id="clear">Reset Note</button>
+      <button class="delete-note" type="delete" id="delete">Delete Note</button>
+    </form>
+    <button class="add-note" type="button">+</button>
+  </div>
+</body>
+
+</html>
