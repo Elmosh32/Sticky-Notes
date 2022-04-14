@@ -102,7 +102,7 @@
 
     if (doDeleteAll) {
       localStorage.clear();
-      location.reload(); 
+      location.reload();
     }
   }
 
