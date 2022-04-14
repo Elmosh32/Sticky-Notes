@@ -167,7 +167,7 @@ h5 {
   transition: 0.5s;
 }
 
-.clear-note span:after {
+.clear-note span::after {
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
   content: "\f51a";
@@ -182,7 +182,7 @@ h5 {
   padding-right: 30px;
 }
 
-.clear-note:hover span:after {
+.clear-note:hover span::after {
   opacity: 1;
   right: 0;
 }
