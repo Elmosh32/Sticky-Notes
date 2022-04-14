@@ -102,6 +102,7 @@
 
     if (doDeleteAll) {
       localStorage.clear();
+      location.reload(); 
     }
   }
 
@@ -116,6 +117,7 @@
         console.log(note.content);
         note.content = ' ';
         saveNotes(notes);
+        location.reload();
       });
     }
   }
