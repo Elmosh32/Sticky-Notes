@@ -1,42 +1,71 @@
 body {
   margin: 0;
-  background: #009578;
+  background: #7afcff;
+}
+
+h5 {
+  margin: 1rem;
+  color: #fff;
+}
+
+.bi-stickies {
+  color: #feff9c;
 }
 
 #app {
   position: relative;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, 200px);
-  padding: 24px;
-  gap: 100px;
+  display: inline-block;
+  grid-template-columns: repeat(auto-fill, 300px);
+}
+
+.container-fluid {
+  padding-right: 0;
+  padding-left: 0;
+  margin-right: auto;
+  margin-left: auto
+}
+
+.navbar {
+  padding-bottom: 0.5rem;
+  background-color: #233740;
 }
 
 .note {
+  background-color: #feff9c;
   position: relative;
-  height: 250px;
-  width: 250px;
+  display: inline-block;
+  height: 260px;
+  width: 260px;
   box-sizing: border-box;
-  padding: 16px;
   border: none;
-  border-radius: 20px;
+  border-radius: 10px;
   box-shadow: 0 0 7px rgba(0, 0, 0, 0.15);
   resize: none;
   font-family: sans-serif;
   font-size: 16px;
+  padding: 5px;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  margin-left: 2.5rem;
 }
 
 .add-note {
   position: relative;
-  height: 250px;
-  width: 250px;
+  height: 260px;
+  width: 260px;
   border: none;
   outline: none;
-  background: rgba(0, 0, 0, 0.1);
-  border-radius: 20px;
+  align-items: center;
+  text-align: center;
   font-size: 120px;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
   color: rgba(0, 0, 0, 0.5);
   cursor: pointer;
   transition: background 0.2s;
+  margin-top: 10rem;
+  margin-left: 2.5rem;
+  bottom: 110px;
 }
 
 .add-note:hover {
@@ -44,40 +73,126 @@ body {
 }
 
 .delete-note {
-  position: relative;
-  background-color: white;
-  height: 40px;
-  width: 124px;
+  position: absolute;
+  background: #11CDD4;
+  background-image: -webkit-linear-gradient(top, #11CDD4, #11999E);
+  background-image: -moz-linear-gradient(top, #11CDD4, #11999E);
+  background-image: -ms-linear-gradient(top, #11CDD4, #11999E);
+  background-image: -o-linear-gradient(top, #11CDD4, #11999E);
+  background-image: linear-gradient(to bottom, #11CDD4, #11999E);
+  -webkit-border-radius: 8;
   border: 2px solid black;
-  border-radius: 12px;
-  padding: 8px 16px;
+  border: none;
+  margin: 310px 0 0 -122px;
+  font-size: 16px;
+  height: 40px;
+  width: 125px;
+  line-height: 40px;
   text-align: center;
-  font-size: 14px;
-  top: -40px;
-  left: 125px;
+  border-radius: 14px;
+  font-family: Georgia;
+  text-decoration: none;
+  color: #000;
+  cursor: pointer;
+}
+
+.delete-note span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.delete-note span::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f2ed";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: -90px;
+  transition: 0.5s;
+}
+
+.delete-note:hover span {
+  padding-left: 30px;
 }
 
 .delete-note:hover {
-  background: linear-gradient(to bottom, #f44336 0%, #28343b 100%);
-  color: white;
-  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+  background: #fc3c3c;
+  background-image: -webkit-linear-gradient(top, #fc3c3c, #d95234);
+  background-image: -moz-linear-gradient(top, #fc3c3c, #d95234);
+  background-image: -ms-linear-gradient(top, #fc3c3c, #d95234);
+  background-image: -o-linear-gradient(top, #fc3c3c, #d95234);
+  background-image: linear-gradient(to bottom, #fc3c3c, #d95234);
+  text-decoration: none;
+  -webkit-animation-delay: 10s;
+  animation-delay: 10s;
+  width: 130px;
+}
+
+.delete-note:hover span::before {
+  opacity: 1;
+  right: 0;
 }
 
 .clear-note {
-  position: relative;
-  background-color: white;
-  height: 40px;
-  width: 124px;
+  position: absolute;
+  background: #11CDD4;
+  background-image: -webkit-linear-gradient(top, #11CDD4, #11999E);
+  background-image: -moz-linear-gradient(top, #11CDD4, #11999E);
+  background-image: -ms-linear-gradient(top, #11CDD4, #11999E);
+  background-image: -o-linear-gradient(top, #11CDD4, #11999E);
+  background-image: linear-gradient(to bottom, #11CDD4, #11999E);
+  -webkit-border-radius: 8;
   border: 2px solid black;
-  border-radius: 12px;
-  padding: 8px 16px;
-  font-size: 14px;
-  align-items: center;
+  border: none;
+  margin: 310px 0 0 -262px;
+  font-size: 16px;
+  height: 40px;
+  width: 125px;
+  line-height: 40px;
   text-align: center;
+  border-radius: 14px;
+  font-family: Georgia;
+  text-decoration: none;
+  color: #000;
+  cursor: pointer;
+}
+
+.clear-note span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.clear-note span:after {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f51a";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -10px;
+  transition: 0.5s;
+}
+
+.clear-note:hover span {
+  padding-right: 30px;
+}
+
+.clear-note:hover span:after {
+  opacity: 1;
+  right: 0;
 }
 
 .clear-note:hover {
   background: linear-gradient(to bottom, #55585e 0%, #094061 100%);
   color: white;
   box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+  text-decoration: none;
+  -webkit-animation-delay: 10s;
+  animation-delay: 10s;
+  width: 130px;
 }
