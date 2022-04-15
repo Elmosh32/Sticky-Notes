@@ -25,11 +25,11 @@ function createNoteElement(id, content) {
   textArea.placeholder = "Empty Sticky Note";
 
   const deleteButton = document.createElement("BUTTON-del");
-  deleteButton.classList.add("delete-note-n");
+  deleteButton.classList.add("delete-note");
   deleteButton.innerHTML = `<p><span>Delete Note</span></p>`
 
   const clearButton = document.createElement("BUTTON-clr");
-  clearButton.classList.add("clear-note-n");
+  clearButton.classList.add("clear-note");
   clearButton.innerHTML = `<p><span>Reset Note</span></p>`
 
   element.appendChild(textArea);
@@ -43,13 +43,13 @@ function createNoteElement(id, content) {
   });
 
 
-  deleteNote(element,textArea,deleteButton,clearButton)
+  deleteNote(id,element,textArea,deleteButton,clearButton);
 
-  clearNote(clearButton,textArea)
+  clearNote(clearButton,textArea);
   return element;
 }
 
-function deleteNote(element,textArea,deleteButton,clearButton) {
+function deleteNote(id,element,textArea,deleteButton,clearButton) {
   deleteButton.addEventListener("click", () => {
     const doDelete = confirm(
       "Do you want delete this note?"
