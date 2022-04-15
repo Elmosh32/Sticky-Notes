@@ -1,47 +1,6 @@
 const notesContainer = document.getElementById("app");
 const addNoteButton = document.getElementById("add");
 
-var canvas;
-var ctx;
-var lastPt = new Object();
-var colours = ['red', 'green', 'blue', 'yellow', 'black'];
-
-function init() {
-  var touchzone = document.getElementById("message");
-  touchzone.addEventListener("touchmove", draw, false);
-  touchzone.addEventListener("touchend", end, false);
-  canvas = document.getElementById('message');
-  ctx = canvas.getContext("2d");
-}
-
-function draw(e) {
-  e.preventDefault();
-
-  //Iterate over all touches
-  for(var i=0;i<e.touches.length;i++) {
-    var id = e.touches[i].identifier;
-    if(lastPt[id]) {
-      ctx.beginPath();
-      ctx.moveTo(lastPt[id].x, lastPt[id].y);
-      ctx.lineTo(e.touches[i].pageX, e.touches[i].pageY);
-      ctx.strokeStyle = colours[id];
-      ctx.stroke();
-
-    }
-    // Store last point
-    lastPt[id] = {x:e.touches[i].pageX, y:e.touches[i].pageY};
-  }
-}
-
-function end(e) {
-e.preventDefault();
-for(var i=0;i<e.changedTouches.length;i++) {
-  var id = e.changedTouches[i].identifier;
-  // Terminate this touch
-  delete lastPt[id];
-}
-}
-
 getNotes().forEach((note) => {
   const noteElement = createNoteElement(note.id, note.content);
   notesContainer.insertBefore(noteElement, null);
@@ -64,7 +23,6 @@ function createNoteElement(id, content) {
   textArea.classList.add("note");
   textArea.value = content;
   textArea.placeholder = "Empty Sticky Note";
-  textArea.addEventListener("load", init);
 
   const deleteButton = document.createElement("BUTTON-del");
   deleteButton.classList.add("delete-note");
