@@ -25,11 +25,9 @@ function createNoteElement(id, content) {
   textArea.placeholder = "Empty Sticky Note";
 
   const deleteButton = document.createElement("BUTTON-del");
-  deleteButton.classList.add("delete-note");
   deleteButton.innerHTML = `<p><span>Delete Note</span></p>`
 
   const clearButton = document.createElement("BUTTON-clr");
-  clearButton.classList.add("clear-note");
   clearButton.innerHTML = `<p><span>Reset Note</span></p>`
 
   element.appendChild(textArea);
