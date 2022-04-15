@@ -477,3 +477,26 @@ h5 {
     width: 152px;
   }
 }
+
+.navbar {
+  position: relative;
+}
+
+.brand {
+  transform: translateX(-50%);
+  position: absolute;
+  left: 50%;
+  top: 15px;
+  display: inline-block;
+}
+
+.navbar-brand {
+  max-width: 200px;
+  margin-top: -10px;
+}
+
+.add-button {
+  position: absolute;
+  top: 14px;
+  right: 15px;
+}
