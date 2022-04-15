@@ -51,12 +51,14 @@ function createNoteElement(id, content) {
 
     if (doDelete) {
       const notes = getNotes().filter((note) => note.id != id);
+      deleteButton.classList.add("delete-note");
 
       saveNotes(notes);
       element.removeChild(textArea);
       element.removeChild(clearButton);
       element.removeChild(deleteButton);
     }
+    element.classList.remove("delete-note");
   });
 
   clearButton.addEventListener("click", function() {
@@ -65,8 +67,11 @@ function createNoteElement(id, content) {
     );
 
     if (doReset) {
+      clearButton.classList.add("clear-note");
       textArea.value = '';
     }
+    clearButton.classList.remove("clear-note");
+
   });
   return element;
 }
