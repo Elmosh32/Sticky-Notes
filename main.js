@@ -48,6 +48,7 @@ function createNoteElement(id, content) {
     );
 
     if (doDelete) {
+      deleteButton.classList.add("delete-note");
       const notes = getNotes().filter((note) => note.id != id);
 
       saveNotes(notes);
@@ -66,6 +67,7 @@ function createNoteElement(id, content) {
     );
 
     if (doReset) {
+      clearButton.classList.add("clear-note");
       textArea.value = '';
     }else{
       clearButton.classList.remove("clear-note");
