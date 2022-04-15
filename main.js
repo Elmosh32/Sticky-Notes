@@ -55,6 +55,9 @@ function createNoteElement(id, content) {
       element.removeChild(textArea);
       element.removeChild(clearButton);
       element.removeChild(deleteButton);
+    }else{
+      deleteButton.classList.remove("delete-note");
+      deleteButton.classList.add("delete-note-n");
     }
   });
 
@@ -66,6 +69,9 @@ function createNoteElement(id, content) {
     if (doReset) {
       clearButton.classList.add("clear-note");
       textArea.value = '';
+    }else{
+      clearButton.classList.remove("clear-note");
+      clearButton.classList.add("clear-note-n");
     }
   });
   return element;
