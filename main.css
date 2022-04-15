@@ -40,7 +40,7 @@ h5 {
   font-family: sans-serif;
 }
 
-.delete-note {
+.delete-note, .delete-note-n{
   position: absolute;
   background: #11CDD4;
   background-image: -webkit-linear-gradient(top, #11CDD4, #11999E);
@@ -59,7 +59,7 @@ h5 {
   cursor: pointer;
 }
 
-.delete-note span {
+.delete-note span, .delete-note-n span{
   cursor: pointer;
   display: inline-block;
   position: relative;
@@ -94,7 +94,7 @@ h5 {
   right: 0;
 }
 
-.clear-note {
+.clear-note, .clear-note-n {
   position: absolute;
   background: #11CDD4;
   background-image: -webkit-linear-gradient(top, #11CDD4, #11999E);
@@ -113,7 +113,7 @@ h5 {
   cursor: pointer;
 }
 
-.clear-note span {
+.clear-note span, .clear-note-n span {
   cursor: pointer;
   display: inline-block;
   position: relative;
@@ -160,7 +160,7 @@ h5 {
     margin-left: 2.5rem;
   }
 
-  .delete-note {
+  .delete-note,  .delete-note-n{
     margin: 185px 0 0 -72px;
     font-size: 10px;
     height: 32px;
@@ -180,7 +180,7 @@ h5 {
     width: 78px;
   }
 
-  .clear-note {
+  .clear-note, .clear-note-n {
     margin: 185px 0 0 -155px;
     font-size: 10px;
     height: 32px;
