@@ -61,22 +61,25 @@ function createNoteElement(id, content) {
     }
   });
 
-  clearButton.addEventListener("click", function() {
-    const doReset = confirm(
-      "Do you want clear this note?"
-    );
-
-    if (doReset) {
-      clearButton.classList.add("clear-note");
-      textArea.value = '';
-    }else{
-      clearButton.classList.remove("clear-note");
-      clearButton.classList.add("clear-note-n");
-    }
-  });
+  clearNote(clearButton,textArea)
   return element;
 }
 
+function clearNote(button,note) {
+clearButton.addEventListener("click", function() {
+  const doReset = confirm(
+    "Do you want clear this note?"
+  );
+
+  if (doReset) {
+    clearButton.classList.add("clear-note");
+    textArea.value = '';
+  }else{
+    clearButton.classList.remove("clear-note");
+    clearButton.classList.add("clear-note-n");
+  }
+});
+}
 
 function addNote() {
   const notes = getNotes();
