@@ -28,8 +28,6 @@ function createNoteElement(id, content) {
   deleteButton.classList.add("delete-note");
   deleteButton.innerHTML = `<p><span>Delete Note</span></p>`
 
-
-
   const clearButton = document.createElement("BUTTON-clr");
   clearButton.classList.add("clear-note");
   clearButton.innerHTML = `<p><span>Reset Note</span></p>`
@@ -51,14 +49,15 @@ function createNoteElement(id, content) {
 
     if (doDelete) {
       const notes = getNotes().filter((note) => note.id != id);
-      deleteButton.classList.add("delete-note");
 
       saveNotes(notes);
       element.removeChild(textArea);
       element.removeChild(clearButton);
       element.removeChild(deleteButton);
+    }else{
+      deleteButton.classList.remove("delete-note");
+      deleteButton.classList.add("delete-note-n");
     }
-    element.classList.remove("delete-note");
   });
 
   clearButton.addEventListener("click", function() {
@@ -67,11 +66,11 @@ function createNoteElement(id, content) {
     );
 
     if (doReset) {
-      clearButton.classList.add("clear-note");
       textArea.value = '';
+    }else{
+      clearButton.classList.remove("clear-note");
+      clearButton.classList.add("clear-note-n");
     }
-    clearButton.classList.remove("clear-note");
-
   });
   return element;
 }
