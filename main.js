@@ -25,9 +25,11 @@ function createNoteElement(id, content) {
   textArea.placeholder = "Empty Sticky Note";
 
   const deleteButton = document.createElement("BUTTON-del");
+  deleteButton.classList.add("delete-note-n");
   deleteButton.innerHTML = `<p><span>Delete Note</span></p>`
 
   const clearButton = document.createElement("BUTTON-clr");
+  clearButton.classList.add("clear-note-n");
   clearButton.innerHTML = `<p><span>Reset Note</span></p>`
 
   element.appendChild(textArea);
@@ -53,9 +55,6 @@ function createNoteElement(id, content) {
       element.removeChild(textArea);
       element.removeChild(clearButton);
       element.removeChild(deleteButton);
-    }else{
-      deleteButton.classList.remove("delete-note");
-      deleteButton.classList.add("delete-note-n");
     }
   });
 
@@ -67,9 +66,6 @@ function createNoteElement(id, content) {
     if (doReset) {
       clearButton.classList.add("clear-note");
       textArea.value = '';
-    }else{
-      clearButton.classList.remove("clear-note");
-      clearButton.classList.add("clear-note-n");
     }
   });
   return element;
