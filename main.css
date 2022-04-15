@@ -27,11 +27,6 @@ h5 {
   margin-left: auto
 }
 
-.navbar {
-  padding-bottom: 0.5rem;
-  background-color: #233740;
-}
-
 .note {
   background-color: #feff9c;
   position: relative;
@@ -482,6 +477,8 @@ h5 {
 
 .navbar {
   position: relative;
+    padding-bottom: 0.5rem;
+    background-color: #233740;
 }
 
 .brand {
@@ -490,6 +487,7 @@ h5 {
   left: 50%;
   top: 15px;
   display: inline-block;
+  cursor: pointer;
 }
 
 .navbar-brand {
