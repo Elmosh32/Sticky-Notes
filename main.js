@@ -42,6 +42,14 @@ function createNoteElement(id, content) {
     updateNote(id, textArea.value);
   });
 
+
+  deleteNote(element,textArea,deleteButton,clearButton)
+
+  clearNote(clearButton,textArea)
+  return element;
+}
+
+function deleteNote(element,textArea,deleteButton,clearButton) {
   deleteButton.addEventListener("click", () => {
     const doDelete = confirm(
       "Do you want delete this note?"
@@ -60,12 +68,9 @@ function createNoteElement(id, content) {
       deleteButton.classList.add("delete-note-n");
     }
   });
-
-  clearNote(clearButton,textArea)
-  return element;
 }
 
-function clearNote(button,note) {
+function clearNote(clearButton,textArea) {
 clearButton.addEventListener("click", function() {
   const doReset = confirm(
     "Do you want clear this note?"
