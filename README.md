@@ -9,7 +9,7 @@
 The sticky notes are persistent in nature meaning your created sticky notes will be there the next time you open up the app. 
 The app uses HTML5's localStorage feature in order to store the sticky notes.. In short, it is sticky notes for web!
 
-## Built With
+### Built With
 * JavaScript
 * HTML
 * CSS
