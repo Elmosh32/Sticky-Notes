@@ -1,9 +1,9 @@
-# Sticky Note (JavaScript,HTML5 and CSS) 
-![Screenshot_7](https://user-images.githubusercontent.com/61812199/159179036-b4086e1b-cd65-4a4f-b4f4-ab01bacc5c42.png) 
-![Screenshot_4](https://user-images.githubusercontent.com/61812199/159178025-837b7031-8689-42dd-be9f-5973126ec2d7.png) 
-![Screenshot_3](https://user-images.githubusercontent.com/61812199/159178035-57ef8f18-c3f3-434f-9a6b-ad90623eff34.png) 
+# Sticky Note
 
----
+---![s1](https://user-images.githubusercontent.com/61812199/163846818-13501a42-b4ce-410a-80e9-686b0a82669a.png)
+![s2](https://user-images.githubusercontent.com/61812199/163846820-62761ed8-e63c-4ef9-be64-32b6f0c7b455.png)
+![s3](https://user-images.githubusercontent.com/61812199/163846823-9c85269e-bf09-427f-b5d0-aa023c24da96.png)
+
 ## About 
 The sticky notes are persistent in nature meaning your created sticky notes will be there the next time you open up the app. 
 The app uses HTML5's localStorage feature in order to store the sticky notes.. In short, it is sticky notes for web!
