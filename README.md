@@ -18,4 +18,4 @@ The app uses HTML5's localStorage feature in order to store the sticky notes.. I
 * CSS
 
 ---
-####Deployed Website: [https://elmosh32.github.io/Sticky-Notes/](https://elmosh32.github.io/Sticky-Notes/)
+#### Deployed Website: [https://elmosh32.github.io/Sticky-Notes/](https://elmosh32.github.io/Sticky-Notes/)
